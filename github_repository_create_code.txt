@@ -1,0 +1,33 @@
+...create a new repository on the command line
+echo "# html-first-projeects">> readme.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -m main
+git remote add origin https://github.com/sheikh-romel/html-first-project.git
+git push -u origin main
+
+
+
+Explanation:
+echo "# html-first-projects" > README.md: Creates a README file with the project title.
+git init: Initializes a new Git repository.
+git add README.md: Stages the README file to be committed.
+git commit -m "first commit": Commits the staged files with a commit message.
+git branch -m main: Renames the default branch to main (this is the new standard).
+git remote add origin: Links your local repository to the GitHub repository.
+git push -u origin main: Pushes your local commits to the GitHub repository.
+
+
+If git commit -m "first commit" is not working even though "Changes to be committed" is shown, let's go through some possible reasons and fixes.
+
+2. Verify That Git Is Configured Properly
+git config --global user.name
+git config --global user.email
+
+If they return nothing, set them with:
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+
+Then try committing again:
+git commit -m "first commit"
